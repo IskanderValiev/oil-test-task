@@ -27,6 +27,7 @@ public class VisitCounterServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        counterService.updateVisitsCount();
         req.setAttribute("visitsCount", counterService.getVisitsCount());
         getServletContext().getRequestDispatcher("/counter_view.jsp").forward(req, resp);
     }
