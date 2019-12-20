@@ -22,9 +22,6 @@ public class VisitsCounterRepositoryImpl implements VisitsCounterRepository {
     private static final String UPDATE_VISITS_COUNT_VALUE = "UPDATE visits_count set count = count + 1";
 
     //language=SQL
-    private static final String INSERT_FIRST_ROW = "INSERT INTO visits_count (count) values (0)";
-
-    //language=SQL
     private static final String SELECT_VISITS_COUNT = "SELECT count FROM visits_count";
 
     public void addVisit() {
